@@ -11,7 +11,7 @@ import { SnackbarManagerService } from '../../services/snackbar-manager.service'
 
 @Component({
   selector: 'app-new-client',
-  imports: [ClientFormComponent, ClientFormComponent],
+  imports: [ClientFormComponent],
   templateUrl: './new-client.component.html',
   styleUrl: './new-client.component.scss',
   providers: [
@@ -35,11 +35,9 @@ export class NewClientComponent implements OnDestroy{
   }
 
   onSubmitClient(value: ClientModelForm) {
-    const {id, ...request} = value;
-    this.httpService.save(request).subscribe(()=>{
+    this.httpService.save(value).subscribe(()=>{
       this.snackBarManager.show('Usuario registrado com sucesso')
       this.routes.navigate(["clients/list"])
-
     })
   }
 

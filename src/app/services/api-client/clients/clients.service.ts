@@ -25,11 +25,11 @@ export class ClientsService implements ImplClientService{
     return this.http.post<SaveClientResponse>(`${this.basePath}clients`, request);
   }
 
-  update(id:number , request: UpdateClientRequest): Observable<UpdateClientResponse> {
+  update(id:string , request: UpdateClientRequest): Observable<UpdateClientResponse> {
     return this.http.put<UpdateClientResponse>(`${this.basePath}clients/${id}`, request);
   }
 
-  delete(id: number): Observable<void> {
+  delete(id: string): Observable<void> {
     return this.http.delete<void>(`${this.basePath}clients/${id}`);
   }
 
@@ -37,7 +37,7 @@ export class ClientsService implements ImplClientService{
     return this.http.get<ListClientResponse[]>(`${this.basePath}clients`);
   }
 
-  findById(id: number): Observable<DetailClientResponse> {
+  findById(id: string): Observable<DetailClientResponse> {
     return this.http.get<DetailClientResponse>(`${this.basePath}clients/${id}`);
   }
 

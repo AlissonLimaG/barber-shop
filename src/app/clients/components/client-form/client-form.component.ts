@@ -21,16 +21,16 @@ import { NgxMaskDirective } from 'ngx-mask';
 export class ClientFormComponent {
 
   @Input() client: ClientModelForm = {
-    id: 0,
+    id: '',
     email: '',
     name: '',
     phone: ''
   }
 
-  @Output() clientSubmiter = new EventEmitter<ClientModelForm>();
+  @Output() clientSubmited = new EventEmitter<ClientModelForm>();
 
   onSubmit(_: NgForm){
-    this.clientSubmiter.emit(this.client);
+    this.clientSubmited.emit(this.client);
   }
 
 }

@@ -5,11 +5,11 @@ export interface ImplClientService{
 
     save(request: SaveClientRequest):Observable<SaveClientResponse>;
 
-    update(id:number, request: UpdateClientRequest):Observable<UpdateClientResponse>;
+    update(id:string, request: UpdateClientRequest):Observable<UpdateClientResponse>;
 
-    delete(id:number):Observable<void>;
+    delete(id:string):Observable<void>;
 
     list():Observable<ListClientResponse[]>;
 
-    findById(id:number):Observable<DetailClientResponse>;
+    findById(id:string):Observable<DetailClientResponse>;
 }
