@@ -21,7 +21,7 @@ import { NgxMaskDirective } from 'ngx-mask';
 export class ClientFormComponent {
 
   @Input() client: ClientModelForm = {
-    id: '',
+    id: 0,
     email: '',
     name: '',
     phone: ''

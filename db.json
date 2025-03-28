@@ -1,16 +1,3 @@
 {
-  "clients": [
-    {
-      "email": "saas@gmail.com",
-      "name": "asdasdassssssssssss",
-      "phone": "21131312312",
-      "id": "c7f2"
-    },
-    {
-      "id": "0135",
-      "email": "aasd@gmail.com",
-      "name": "sadadada",
-      "phone": "21212121212"
-    }
-  ]
+  "clients": []
 }

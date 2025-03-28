@@ -1,13 +1,13 @@
 export interface ClientModelForm{
-    id:string
+    id:number,
     name:string,
     email:string,
-    phone:string,
+    phone:string
 }
 
 export interface ClientModelTable{
-    id:string
+    id:number,
     name:string,
     email:string,
-    phone:string,
+    phone:string
 }

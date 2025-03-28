@@ -5,7 +5,7 @@ export interface ImplScheduleService {
 
     save(request: SaveScheduleRequest): Observable<SaveScheduleResponse>
 
-    delete(id: string): Observable<void>
+    delete(id: number): Observable<void>
 
     listInMonth(year: number, month: number): Observable<ScheduleAppointmentMonthResponse>
 

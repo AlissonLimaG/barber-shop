@@ -24,7 +24,7 @@ export class EditClientComponent implements OnInit, OnDestroy {
 
   private httpsubscriptions: Subscription[] = []
 
-  client: ClientModelForm = { id: '', name: '', email: '', phone: '' }
+  client: ClientModelForm = { id: 0, name: '', email: '', phone: '' }
 
   constructor(
     @Inject(SERVICES.HTTP.CLIENT) private readonly httpService: ImplClientService,
@@ -41,8 +41,7 @@ export class EditClientComponent implements OnInit, OnDestroy {
       this.router.navigate(['clients/list'])
       return
     }
-    console.log(id)
-    this.httpsubscriptions?.push(this.httpService.findById(id).subscribe(data => this.client = data))
+    this.httpsubscriptions?.push(this.httpService.findById(Number(id)).subscribe(data => this.client = data))
   }
 
   ngOnDestroy(): void {

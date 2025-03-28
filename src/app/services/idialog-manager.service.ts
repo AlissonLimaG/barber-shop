@@ -6,5 +6,4 @@ export interface ImplDialogManagerService{
 
     showYesNoDialog(component: ComponentType<YesNoDialogComponent>, data: {title:string, content: string}):Observable<any>
 
-
 }

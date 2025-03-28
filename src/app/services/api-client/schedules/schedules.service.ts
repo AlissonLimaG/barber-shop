@@ -17,7 +17,7 @@ export class SchedulesService implements ImplScheduleService {
   save(request: SaveScheduleRequest): Observable<SaveScheduleResponse> {
     return this.http.post<SaveScheduleResponse>(`${this.basePath}schedules`, request)
   }
-  delete(id: string): Observable<void> {
+  delete(id: number): Observable<void> {
     return this.http.delete<void>(`${this.basePath}schedules/${id}`)
   }
   listInMonth(year: number, month: number): Observable<ScheduleAppointmentMonthResponse> {
