@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding-bottom: 3rem;
 }
 
@@ -11,5 +10,10 @@
     font-weight: bold;
     padding: 8px 16px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    background-color: rgb(33, 33, 33);
+    border-radius: 6px;
+}
+
+div{
+    color: whitesmoke;
 }

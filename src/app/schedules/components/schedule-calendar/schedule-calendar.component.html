@@ -1,4 +1,3 @@
-<p>schedule-calendar works!</p>
 <div class="container">
     <div class="row">
 
@@ -20,7 +19,7 @@
                             <mat-label>Término</mat-label>
                             <input matInput [matTimepicker]="endAtPicker" [ngModelOptions]="{updateOn: 'blur'}"
                                 name="endAt" id="endAt" #endAtModel="ngModel" [(ngModel)]="newSchedule.endAt"
-                                disabled="true">
+                            >
                             <mat-timepicker #endAtPicker />
                             <mat-timepicker-toggle [for]="endAtPicker" matSuffix />
                         </mat-form-field>
